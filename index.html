@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vittrine - Gestão para Restaurantes e Lojas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+      .glassmorphism {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      .dark .glassmorphism {
+        background: rgba(16, 28, 34, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+            },
+            fontFamily: {
+              display: ["Manrope", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200">
+<div class="relative min-h-screen w-full">
+<div class="absolute inset-0 -z-10 h-full w-full bg-background-light dark:bg-background-dark bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:48px_48px]"></div>
+<div class="absolute -z-10 top-0 left-0 h-96 w-96 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+<div class="absolute -z-10 bottom-0 right-0 h-96 w-96 bg-primary/20 rounded-full blur-3xl opacity-50"></div>
+<header class="sticky top-0 z-50 glassmorphism">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between">
+<a class="flex items-center gap-3" href="index.html">
+<svg class="h-8 w-8 text-primary" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
+<path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white">Vittrine</h1>
+</a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-primary" href="index.html">Início</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="recursos.html">Recursos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="planos.html">Planos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="sobre.html">Sobre</a>
+</nav>
+<div class="hidden md:flex items-center gap-4">
+<button class="px-4 py-2 text-sm font-bold rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">Entrar</button>
+<button class="px-4 py-2 text-sm font-bold text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors">Experimente grátis</button>
+</div>
+<button class="md:hidden text-slate-900 dark:text-white">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+<div class="max-w-6xl mx-auto">
+<!-- Hero Section -->
+<div class="text-center mb-20">
+<p class="text-primary font-semibold text-lg mb-4">Sua Solução Completa</p>
+<h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-6">
+A vitrine <span class="text-primary">inteligente</span><br>para o seu negócio
+</h1>
+<p class="text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+Simplifique a gestão de produtos e finanças do seu restaurante ou loja com nossa plataforma intuitiva e eficiente. Tudo que você precisa em um só lugar.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-8 py-4 text-lg font-bold text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
+Começar teste grátis
+</button>
+<button class="px-8 py-4 text-lg font-bold text-primary border-2 border-primary rounded-lg hover:bg-primary/10 transition-colors">
+Ver demonstração
+</button>
+</div>
+</div>
+
+<!-- Hero Image Section -->
+<section class="mb-20">
+<div class="glassmorphism p-8 rounded-2xl">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">Veja a Vittrine em ação</h2>
+<p class="text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+Nossa plataforma foi desenvolvida pensando na simplicidade e eficiência. Veja como é fácil gerenciar seu negócio com a Vittrine.
+</p>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+</svg>
+<span class="text-slate-700 dark:text-slate-300">Interface intuitiva e fácil de usar</span>
+</div>
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+</svg>
+<span class="text-slate-700 dark:text-slate-300">Relatórios em tempo real</span>
+</div>
+<div class="flex items-center gap-4">
+<svg class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+</svg>
+<span class="text-slate-700 dark:text-slate-300">Acesso de qualquer dispositivo</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="glassmorphism p-4 rounded-xl">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Dashboard Vittrine" class="w-full h-64 object-cover rounded-lg">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Features Section -->
+<section class="glassmorphism p-12 rounded-2xl mb-20">
+<h2 class="text-4xl font-bold text-slate-900 dark:text-white text-center mb-12">Tudo que você precisa em um só lugar</h2>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="text-center group">
+<div class="flex items-center justify-center h-20 w-20 rounded-2xl bg-primary/10 mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+<svg class="h-10 w-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Controle de Estoque</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">Mantenha seu estoque organizado, evite perdas e otimize suas compras com alertas inteligentes.</p>
+</div>
+<div class="text-center group">
+<div class="flex items-center justify-center h-20 w-20 rounded-2xl bg-primary/10 mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+<svg class="h-10 w-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Gestão Financeira</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">Tenha uma visão clara das suas finanças com relatórios detalhados e controle de fluxo de caixa.</p>
+</div>
+<div class="text-center group">
+<div class="flex items-center justify-center h-20 w-20 rounded-2xl bg-primary/10 mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+<svg class="h-10 w-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Relatórios Inteligentes</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">Acompanhe o desempenho do seu negócio com dashboards em tempo real e insights valiosos.</p>
+</div>
+<div class="text-center group">
+<div class="flex items-center justify-center h-20 w-20 rounded-2xl bg-primary/10 mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+<svg class="h-10 w-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.5a9.5 9.5 0 1 0 0 19 9.5 9.5 0 0 0 0-19Z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Suporte Especializado</h3>
+<p class="text-slate-600 dark:text-slate-300 leading-relaxed">Conte com nossa equipe de especialistas para maximizar o potencial do seu negócio.</p>
+</div>
+</div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="glassmorphism p-12 rounded-2xl mb-20">
+<h2 class="text-4xl font-bold text-slate-900 dark:text-white text-center mb-12">O que nossos clientes dizem</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="text-center">
+<div class="mb-6">
+<img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cliente satisfeito" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">João Silva</h4>
+<p class="text-primary font-medium">Restaurante Sabor & Arte</p>
+</div>
+<p class="text-slate-600 dark:text-slate-300 italic">"A Vittrine transformou completamente a gestão do meu restaurante. Agora tenho controle total sobre estoque e finanças."</p>
+</div>
+<div class="text-center">
+<div class="mb-6">
+<img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cliente satisfeita" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Maria Santos</h4>
+<p class="text-primary font-medium">Loja Moda & Estilo</p>
+</div>
+<p class="text-slate-600 dark:text-slate-300 italic">"Interface super intuitiva! Meus funcionários aprenderam a usar em poucos minutos. Recomendo para qualquer negócio."</p>
+</div>
+<div class="text-center">
+<div class="mb-6">
+<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Cliente satisfeito" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover">
+<h4 class="text-lg font-bold text-slate-900 dark:text-white">Carlos Oliveira</h4>
+<p class="text-primary font-medium">Café Central</p>
+</div>
+<p class="text-slate-600 dark:text-slate-300 italic">"Os relatórios me ajudaram a identificar os produtos mais vendidos e otimizar meu cardápio. Vendas aumentaram 40%!"</p>
+</div>
+</div>
+</section>
+
+<!-- Stats Section -->
+<section class="glassmorphism p-12 rounded-2xl mb-20">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+<div>
+<div class="text-4xl font-bold text-primary mb-2">500+</div>
+<div class="text-slate-600 dark:text-slate-300">Empresas Atendidas</div>
+</div>
+<div>
+<div class="text-4xl font-bold text-primary mb-2">98%</div>
+<div class="text-slate-600 dark:text-slate-300">Satisfação dos Clientes</div>
+</div>
+<div>
+<div class="text-4xl font-bold text-primary mb-2">24/7</div>
+<div class="text-slate-600 dark:text-slate-300">Suporte Disponível</div>
+</div>
+<div>
+<div class="text-4xl font-bold text-primary mb-2">30%</div>
+<div class="text-slate-600 dark:text-slate-300">Aumento Médio de Vendas</div>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section class="glassmorphism p-12 rounded-2xl text-center">
+<h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">Pronto para transformar seu negócio?</h2>
+<p class="text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-2xl mx-auto">
+Junte-se a centenas de empresários que já descobriram o poder da gestão inteligente com a Vittrine.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="px-8 py-4 text-lg font-bold text-white bg-primary rounded-lg hover:bg-primary/90 transition-colors shadow-lg shadow-primary/25">
+Começar teste grátis
+</button>
+<button class="px-8 py-4 text-lg font-bold text-slate-900 dark:text-white border-2 border-slate-300 dark:border-slate-600 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+Falar com especialista
+</button>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400 mt-6">
+Teste grátis por 14 dias • Sem cartão de crédito • Cancele quando quiser
+</p>
+</section>
+</div>
+</main>
+<!-- Footer será carregado aqui -->
+<div id="footer-container"></div>
+</div>
+</div>
+<script src="include-footer.js"></script>
+</body></html>
